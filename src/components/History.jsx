@@ -5,7 +5,7 @@ const History = ({ history, moveTo, currentMove }) => {
     <ul>
       {history.map((_, move) => {
         return (
-          <li>
+          <li key={move}>
             <button
               style={{
                 fontWeight: currentMove === move ? 'bold' : 'normal',
