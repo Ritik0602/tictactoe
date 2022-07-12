@@ -1,7 +1,3 @@
-// const message = winner
-//     ? `Winner is ${winner}`
-//     : `Next player is ${current.isXNext ? 'X' : 'O'}`;
-
 import React from 'react';
 
 const StatusMessage = ({ winner, current }) => {
