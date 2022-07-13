@@ -16,16 +16,12 @@ const App = () => {
   const { winner, winningSquares } = calculateWinner(current.board);
 
   const handleSquareClick = position => {
-    if (
-      current.board[position] ||
-      winner ||
-      currentMove + 1 !== history.length
-    ) {
+    if (current.board[position] || winner) {
       return;
     }
 
     setHistory(prev => {
-      const last = prev[prev.length - 1];
+      const last = prev[currentMove];
 
       const newBoard = last.board.map((square, pos) => {
         if (pos === position) {
@@ -35,7 +31,9 @@ const App = () => {
         return square;
       });
 
-      return prev.concat({ board: newBoard, isXNext: !last.isXNext });
+      return prev
+        .slice(0, currentMove + 1)
+        .concat({ board: newBoard, isXNext: !last.isXNext });
     });
 
     setCurrentMove(prev => prev + 1);

@@ -10,7 +10,8 @@ const StatusMessage = ({ winner, current }) => {
           Winner is{' '}
           <span className={winner === 'X' ? 'text-green' : 'text-orange'}>
             {winner}
-          </span>
+          </span>{' '}
+          !
         </>
       )}
       {!winner && !noMovesLeft && (
