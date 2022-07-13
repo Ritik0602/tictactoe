@@ -1,4 +1,8 @@
-# Nano React App Default Javascript Template
+# TIC TAC TOE React App
+
+Simple React TicTacToe game built using nano-react-app template.
+
+Deployed here: [TIC TAC TOE](https://xotictactoe.surge.sh)
 
 The default template project for [nano-react-app](https://github.com/nano-react-app/nano-react-app).
 
